@@ -85,6 +85,32 @@ Modify any existing contact’s:
 
 ---
 
+
+# 🧩 Class Descriptions
+
+### **1. Person**
+
+`Person` is an abstract base class that stores the basic attribute `name`. It defines a pure virtual function `show_details()`, ensuring that all derived classes implement their own version of this function. This class acts as a foundational blueprint for representing a person-like entity in the system.
+
+---
+
+### **2. contact**
+
+The `contact` class inherits from `Person` and represents an individual contact entry. It contains additional attributes such as phone number, address, and email. This class handles all major operations including creating, editing, deleting, searching, and displaying contacts through file management.
+
+---
+
+### **3. FileManager**
+
+`FileManager` is a utility class responsible for handling file operations. It maintains a static `fstream` object that ensures consistent and safe file access. This class simplifies file handling by opening files when required and closing them after use.
+
+---
+
+### **4. output_contacts (Friend Function)**
+
+This friend function has special access to private members of the `contact` class. It reads contact data from the file and displays all stored contacts in a formatted way. It supports the overall functionality by offering an alternative method to list contacts.
+
+
 ## 📂 File Structure
 
 ```
@@ -119,6 +145,7 @@ This project helps understand:
 * Error handling and safe file operations
 
 ---
+
 
 
 
